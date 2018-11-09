@@ -21,5 +21,5 @@ function Init()
     mon.clear();
 end
 
-CheckError();
+--CheckError();
 WriteInMonitor("Hellow World")
