@@ -1,3 +1,6 @@
+monitor = peripheral.wrap("top")
+reactor = peripheral.wrap("back")
+
 Init()
 
 function CheckError()
@@ -15,10 +18,9 @@ function WriteInMonitor(message)
 end
 
 function Init()
-    monitor = peripheral.wrap("top")
-    reactor = peripheral.wrap("back")
-
-    mon.clear();
+    
+    CheckError()
+    mon.clear()
 end
 
 --CheckError();
