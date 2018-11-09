@@ -1,11 +1,11 @@
 Init()
 
 function CheckError()
-    if monitor[1] == nil then
+    if _G.monitor == nil then
         error("No monitor attached")
     end
 
-    if reactor[1] == nil then
+    if _G.reactor == nil then
         error("No reactor attached")
     end
 end
@@ -15,8 +15,8 @@ function WriteInMonitor(message)
 end
 
 function Init()
-    _G.monitor = peripheral.find("monitor")
-    _G.reactor = {peripheral.find("BigReactors-Reactor")}
+    _G.monitor = peripheral.wrap("monitor")
+    _G.reactor = {peripheral.wrap("BigReactors-Reactor")}
 
     mon.clear();
 end
